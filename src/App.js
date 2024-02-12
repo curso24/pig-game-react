@@ -68,6 +68,9 @@ if (diceNumber ===1){
 
 )
 
+const finishedPlaying =Math.max (...score )>= 10 ? true : false
+
+
 
   return (
     <main>
@@ -90,13 +93,15 @@ if (diceNumber ===1){
           className="dice"
         />
       )}
-      <button className="btn btn--new" onClick={handleNewGame}>New game</button>
+      <button className="btn btn--new" onClick={handleNewGame}>New game🆕</button>
       
-      <button className="btn btn--roll" onClick={handleRollDice}>Roll Dice</button>
+      <button className="btn btn--roll" onClick={handleRollDice} 
+        disabled={finishedPlaying}>Roll Dice🎲</button>
       
-      <button className="btn btn--hold" onClick={handleHold}>Hold</button>
+      <button className="btn btn--hold" onClick={handleHold} 
+      disabled={finishedPlaying}>Hold🌊</button>
       
     </main>
-  );
+  )
 }
 export default App;

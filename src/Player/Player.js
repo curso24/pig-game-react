@@ -13,7 +13,7 @@ function Player({ name, score, current, isActive }) {
   // } else {
   // classPlayer = 'player'
   //}
-  const classPlayer = score > 10
+  const classPlayer = score >= 10
     
       ? 'player  player--winner'
       :isActive
